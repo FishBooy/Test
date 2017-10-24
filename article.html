@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>blog-template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="css/public.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/test.js"></script>
+</head>
+<body onload="onBodyLoad()">
+
+    <div class="main-content">
+        <div class="article-content">
+            <h2 class="article-title"><a href="">JavaScript内存泄漏教程</a></h2>
+            <p class="article-body">好能有一种方法，在新建引用的时候就声明，哪些引用必须手动清除，哪些引用可以忽略不计，当其他引用消失以后，垃圾回收机制就可以释放内存。这样就能大大减轻程序员的负担，你只要清除主要引用就可以了。ES6 考虑到了这一点，推出了两种新的数据结构：WeakSet 和 WeakMap。它们对于值的引用都是不计入垃圾回收机制的，所以名字里面才会有一个"Weak"，表示这是弱引用。</p>
+        </div>
+    </div>
+
+</body>
+</html>
