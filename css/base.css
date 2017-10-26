@@ -1,3 +1,4 @@
+/*公共-布局*/
 .clear-fix:after{
     float: none;
     display: block;
@@ -8,8 +9,19 @@
     overflow: hidden;
     zoom: 1;
 }
+.transition600{
+    transition: all 0.6s;
+}
+.transition400{
+    transition: all 0.4s;
+}
+.main-wrapper{
+    width: 60%;
+    margin: 0 auto;
+}
 
 
+/*公共-头部*/
 .main-header{
     padding: 1em 0 0 0;
 }
@@ -18,66 +30,51 @@
     float: left;
     margin-left: 1.5em;
 }
-
-
-
-.main-wrapper{
-    width: 60%;
-    margin: 0 auto;
-}
+/*列表-容器*/
 .article-wrap{
     border:rgba(255,255,255,0) 1px solid;
-    /*border-radius: 5px;*/
     padding: 0 1.5em;
-    transition: all 0.6s;
-    margin-bottom: 10px;
 }
 .article-wrap.chosen-arc{
     border-color:#E6E9EF;
     background: #fff;
-    box-shadow: 0 2px 4px rgba(100,100,100,.14);
+    box-shadow: 0 1px 3px rgba(100,100,100,.14);
     padding: 0 1.1em 0 1.9em;
 }
-
-
+/*列表-标题*/
 .article-title{
     font-size: 1.5em;
-    padding:0.8em 0 0 0;
-    transition: all 0.4s;
+    padding:1em 0 0 0;
 }
 .article-title a{
 	color: #283443;
-    position: relative;
-    left: 0px;
-    transition: all 0.4s;
+    text-decoration: none;
+}
+.article-title a:hover{
+    text-decoration: none;
 }
 .article-wrap.chosen-arc .article-title a{
-    /*color: #EF530E;*/
     color: #ea6037;
 }
-
-
+/*列表-段落*/
 .article-body{
     font-size: 1.2em;
     color: #606975;
     line-height: 1.8em;
     padding: 0.5em 0 0.6em 0;
-    transition: all 0.4s;
 }
 .article-wrap.chosen-arc .article-body{
     color: #434B58;
-    /*text-indent: 2em;*/
 }
-
+/*列表-评论*/
 .article-info{
     color: #7E848E;
-    border-bottom: rgb(192, 199, 206) 1px dotted;
+    border-bottom: rgba(192, 199, 206,.8) 1px dotted;
     font-size: 1.1em;
-    padding: 0 0 10px 0;
+    padding: 0 0 12px 0;
     vertical-align: middle;
     line-height: 20px;
     font-weight: normal;
-    transition: all 0.4s;
 }
 .article-info span{
     margin-right: 10px;
@@ -93,8 +90,7 @@
 }
 
 
-
-/*-------*/
+/*---适配尺寸---*/
 @media (max-width: 990px) {
     .main-wrapper{
         width: 100%;
