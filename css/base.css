@@ -16,7 +16,7 @@
     transition: all 0.4s;
 }
 .main-wrapper{
-    width: 60%;
+    width: 55%;
     margin: 0 auto;
 }
 
@@ -28,22 +28,35 @@
 .home-link{
     display: block;
     float: left;
-    margin-left: 1.5em;
+    margin-left: 1.6em;
 }
 /*列表-容器*/
+.main-content{
+    /*background: #fff;*/
+}
+.main-content .article-wrap:first-child{
+    /*border-top:#E6E9EF 1px solid;*/
+}
 .article-wrap{
     border:rgba(255,255,255,0) 1px solid;
+/*    border-left-color: #E6E9EF;
+    border-right-color: #E6E9EF;*/
     padding: 0 1.5em;
+    position: relative;
+    left: 0px;
+}
+.article-wrap img{
+    width: 100%!important;
 }
 .article-wrap.chosen-arc{
-    border-color:#E6E9EF;
     background: #fff;
-    box-shadow: 0 1px 3px rgba(100,100,100,.14);
-    padding: 0 1.1em 0 1.9em;
+    border-color:#e3e6ea;    
+    box-shadow: 0 1px 4px rgba(100,100,100,.18);
+    left: 8px;
 }
 /*列表-标题*/
 .article-title{
-    font-size: 1.5em;
+    font-size: 1.6em;
     padding:1em 0 0 0;
 }
 .article-title a{
@@ -58,20 +71,20 @@
 }
 /*列表-段落*/
 .article-body{
-    font-size: 1.2em;
-    color: #606975;
+    font-size: 1.3em;
+    color: #545b65;
     line-height: 1.8em;
     padding: 0.5em 0 0.6em 0;
 }
 .article-wrap.chosen-arc .article-body{
-    color: #434B58;
+    color: #2c3138;
 }
 /*列表-评论*/
 .article-info{
     color: #7E848E;
-    border-bottom: rgba(192, 199, 206,.8) 1px dotted;
+    border-bottom: rgba(192, 199, 206,1) 1px dotted;
     font-size: 1.1em;
-    padding: 0 0 12px 0;
+    padding: 0 0 15px 0;
     vertical-align: middle;
     line-height: 20px;
     font-weight: normal;
@@ -84,6 +97,7 @@
 }
 .article-wrap.chosen-arc .article-info{
     border-color: rgba(255,255,255,0);
+    color: #686f79;
 }
 .article-wrap.chosen-prev .article-info{
     border-color: rgba(255,255,255,0);
@@ -96,15 +110,15 @@
         width: 100%;
     }
     .article-wrap{
-        border-left: none;
-        border-right: none;
+/*        border-left: none;
+        border-right: none;*/
     }
     .article-wrap.chosen-arc{
         border-radius: 0;
-        border-left: none;
-        border-right: none;
-        box-shadow: 0 0 5px rgba(100,100,100,.1);
-        /*box-shadow: none;*/
+        border-left-color: rgba(255,255,255,0);
+        border-right-color: rgba(255,255,255,0);
+        box-shadow: 0 1px 3px rgba(100,100,100,.12);
+        left: 0;
     }
 }
 @media (min-width: 990px) and (max-width: 1200px) {
@@ -114,6 +128,6 @@
 }
 @media (min-width: 1200px) {
     .main-wrapper{
-        width: 60%;
+        width: 55%;
     }
 }
