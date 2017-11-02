@@ -46,7 +46,7 @@ button, input, select, textarea { font-size: 100%; } /* 使得表单元素在 ie
 table { border-collapse: collapse; border-spacing: 0; }
 
 /*----*/
-body{background: #fbfbfb;font-family: "microsoft yahei",Arial;-webkit-font-smoothing: antialiased;font-smoothing: antialiased;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{background: #fdfdfd;font-family: "microsoft yahei",Arial;-webkit-font-smoothing: antialiased;font-smoothing: antialiased;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 
 /*-----字体图标---*/
 
