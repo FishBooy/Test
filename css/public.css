@@ -1,13 +1,4 @@
 *{margin: 0;padding: 0;list-style: none;}
-/*
-KISSY CSS Reset
-理念：1. reset 的目的不是清除浏览器的默认样式，这仅是部分工作。清除和重置是紧密不可分的。
-2. reset 的目的不是让默认样式在所有浏览器下一致，而是减少默认样式有可能带来的问题。
-3. reset 期望提供一套普适通用的基础样式。但没有银弹，推荐根据具体需求，裁剪和修改后再使用。
-特色：1. 适应中文；2. 基于最新主流浏览器。
-维护：玉伯<lifesinger@gmail.com>, 正淳<ragecarrier@gmail.com>
- */
-
 /** 清除内外边距 **/
 body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
 dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
@@ -33,8 +24,7 @@ ul, ol { list-style: none; }
 
 /** 重置文本格式元素 **/
 a { text-decoration: none; outline: none;}
-a:hover { text-decoration: underline; }
-
+a:hover { text-decoration: none; }
 
 /** 重置表单元素 **/
 legend { color: #000; } /* for ie6 */
@@ -46,7 +36,7 @@ button, input, select, textarea { font-size: 100%; } /* 使得表单元素在 ie
 table { border-collapse: collapse; border-spacing: 0; }
 
 /*----*/
-body{background: #fdfdfd;font-family: "microsoft yahei",Arial;-webkit-font-smoothing: antialiased;font-smoothing: antialiased;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{background: #fcfcfc;font-family: "microsoft yahei",Arial;-webkit-font-smoothing: antialiased;font-smoothing: antialiased;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 
 /*-----字体图标---*/
 
