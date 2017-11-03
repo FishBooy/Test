@@ -19,6 +19,9 @@
     width: 60%;
     margin: 0 auto;
 }
+.screen-reader-text{
+    display: none;
+}
 
 
 /*公共-头部*/
@@ -77,7 +80,7 @@
 }
 /*列表-评论*/
 .article-info{
-    border-bottom: rgba(192, 199, 206,1) 1px dotted;
+    border-bottom: rgba(192, 199, 206,0.8) 1px dotted;
     font-size: 1.1em;
     padding: 0 0 15px 0;
     vertical-align: middle;
@@ -102,6 +105,49 @@
 .article-wrap.chosen-prev .article-info{
     border-color: rgba(255,255,255,0);
 }
+/*文章翻页*/
+.nav-links{
+    text-align: center;
+    font-size: 1.2em;
+    padding: 0 1.4em;
+    position: relative;
+    margin: 1.5em 0 0 0;
+}
+.page-int{
+    display: inline-block;
+    color: #545b65;
+    padding: 6px 8px;
+    border-radius: 15px;
+    border: rgba(255,255,255,0) 1px solid;
+}
+.page-int.current{
+    color: #555;
+    font-weight: bold;
+}
+.prev,.next{
+    color: #545b65;
+    padding: 0 10px;
+    display: block;
+    position: absolute;
+    top: 0;
+    margin: 0;
+}
+.prev i,.next i{
+    font-size: 1.4em;
+}
+.prev{left: 1em;}
+.next{right: 1em;}
+.prev:hover,a.next:hover{
+    text-align: left;
+    color: #2c3138;
+}
+a.prev:hover{
+    left: 0.4em;
+}
+a.next:hover{
+    right: 0.4em;
+
+}
 
 /*====文章页面====*/
 .article-all-content p{
@@ -117,16 +163,21 @@
     .main-wrapper{
         width: 100%;
     }
-    .article-wrap{
-/*        border-left: none;
-        border-right: none;*/
-    }
     .article-wrap.chosen-arc{
         border-radius: 0;
         border-left-color: rgba(255,255,255,0);
         border-right-color: rgba(255,255,255,0);
         box-shadow: 0 1px 3px rgba(100,100,100,.12);
         left: 0;
+    }
+    .nav-links{
+        margin: 1em 0 0 0;
+    }
+    .prev,.next{
+        top: 0.2em;
+    }
+    .prev i,.next i{
+        font-size: 1.2em;
     }
 }
 @media (min-width: 990px) and (max-width: 1200px) {
