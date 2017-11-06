@@ -5,8 +5,8 @@
     <title>blog-template</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1,user-scalable=no">
-    <link rel="stylesheet" href="css/public.css" />
-    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/test.js"></script>
 </head>
@@ -63,7 +63,7 @@
             <div class="nav-links">
                 <div class="nav-previous">
                     <a href="http://localhost:8888/2017/10/27/%e6%b5%8b%e8%af%95%e6%96%87%e7%ab%a0/" rel="prev">
-                        <span class="meta-nav" aria-hidden="true"><i class="iconfont icon-back"></i></span> 
+                        <span class="meta-nav" aria-hidden="true"><i class="iconfont icon-arrow-left1"></i></span> 
                         <span class="screen-reader-text">上篇文章：</span> 
                         <span class="post-title">测试文章</span></a>
                     </div>
@@ -71,7 +71,7 @@
                         <a href="http://localhost:8888/2017/11/05/wordpres%e6%b5%8b%e8%af%95%e6%96%87%e7%ab%a0/" rel="next">
                             <span class="screen-reader-text">下篇文章：</span>
                             <span class="post-title">测试文章</span>
-                            <span class="meta-nav" aria-hidden="true"><i class="iconfont icon-right"></i></span>
+                            <span class="meta-nav" aria-hidden="true"><i class="iconfont icon-arrow-right"></i></span>
                         </a>
                     </div>
                 </div>
@@ -79,7 +79,7 @@
 
         <div id="comments" class="comments-area">
 
-            <h2 class="comments-title">共有8条评论</h2>
+            <h2 class="comments-title"><i class="iconfont icon-mark"></i>共有8条评论</h2>
             <ol class="comment-list">
                 <li id="comment-2" class="comment even thread-even depth-1 parent">
                     <article id="div-comment-2" class="comment-body">
@@ -104,56 +104,8 @@
                         </div>           
                     </article><!-- .comment-body -->
 
-                    <ol class="children">
-                        <li id="comment-3" class="comment byuser comment-author-admin bypostauthor odd alt depth-2 parent">
-                            <article id="div-comment-3" class="comment-body">
-                                <footer class="comment-meta">
-                                    <div class="comment-author vcard">
-                                        <img alt='' src='http://0.gravatar.com/avatar/36e226ebe1e833f8e64265bbd1914a8c?s=56&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/36e226ebe1e833f8e64265bbd1914a8c?s=112&amp;d=mm&amp;r=g 2x' class='avatar avatar-56 photo' height='56' width='56' /><b class="fn">admin</b><span class="says">说道：</span>                    
-                                    </div><!-- .comment-author -->
+                    <!--comment-children-->
 
-                                    <div class="comment-metadata">
-                                        <a href="http://localhost:8888/2017/11/02/%e5%86%85%e5%ae%b9%e9%a1%b5%e9%9d%a2%e6%b5%8b%e8%af%95/#comment-3">
-                                            <time datetime="2017-11-05T00:06:27+00:00">2017年11月5日 上午12:06</time>
-                                        </a>
-                                    </div><!-- .comment-metadata -->
-                                </footer><!-- .comment-meta -->
-
-                                <div class="comment-content">
-                                    <p>奥斯卡的那段时刻fdsf啊克里斯蒂娜熟练度那啥考虑到<code>var name="kevin"</code></p>
-                                </div><!-- .comment-content -->
-
-                                <div class="reply">
-                                    <a rel='nofollow' class='comment-reply-link' href='http://localhost:8888/2017/11/02/%e5%86%85%e5%ae%b9%e9%a1%b5%e9%9d%a2%e6%b5%8b%e8%af%95/?replytocom=3#respond' onclick='return addComment.moveForm( "div-comment-3", "3", "respond", "13" )' aria-label='回复给admin'>回复</a>
-                                </div>          
-                            </article><!-- .comment-body -->
-                            <ol class="children">
-                                <li id="comment-8" class="comment byuser comment-author-admin bypostauthor even depth-3">
-                                    <article id="div-comment-8" class="comment-body">
-                                        <footer class="comment-meta">
-                                            <div class="comment-author vcard">
-                                                <img alt='' src='http://0.gravatar.com/avatar/36e226ebe1e833f8e64265bbd1914a8c?s=56&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/36e226ebe1e833f8e64265bbd1914a8c?s=112&amp;d=mm&amp;r=g 2x' class='avatar avatar-56 photo' height='56' width='56' /><b class="fn">admin</b><span class="says">说道：</span>                    
-                                            </div><!-- .comment-author -->
-
-                                            <div class="comment-metadata">
-                                                <a href="http://localhost:8888/2017/11/02/%e5%86%85%e5%ae%b9%e9%a1%b5%e9%9d%a2%e6%b5%8b%e8%af%95/#comment-8">
-                                                    <time datetime="2017-11-05T01:05:38+00:00">2017年11月5日 上午1:05</time>
-                                                </a>
-                                            </div><!-- .comment-metadata -->
-                                        </footer><!-- .comment-meta -->
-
-                                        <div class="comment-content">
-                                            <p>xxcczxczxczzx</p>
-                                        </div><!-- .comment-content -->
-
-                                        <div class="reply">
-                                            <a rel='nofollow' class='comment-reply-link' href='http://localhost:8888/2017/11/02/%e5%86%85%e5%ae%b9%e9%a1%b5%e9%9d%a2%e6%b5%8b%e8%af%95/?replytocom=8#respond' onclick='return addComment.moveForm( "div-comment-8", "8", "respond", "13" )' aria-label='回复给admin'>回复</a>
-                                        </div>           
-                                    </article><!-- .comment-body -->
-                                </li><!-- #comment-## -->
-                            </ol>
-                        </li><!-- #comment-## -->
-                    </ol><!-- .children -->
                 </li><!-- #comment-## -->
 
 
@@ -206,7 +158,7 @@
             </ol><!-- .comment-list -->
 
             <div id="respond" class="comment-respond">
-                <h3 id="reply-title" class="comment-reply-title">发表评论 
+                <h3 id="reply-title" class="comment-reply-title"><i class="iconfont icon-edit"></i>发表评论 
                     <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2017/11/03/72/#respond" style="display:none;">取消回复</a></small>
                 </h3>            
                 <form action="http://localhost:8888/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
