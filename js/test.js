@@ -1,6 +1,18 @@
 
 var timeId;
 $(function(){
+
+	//菜单开关
+	$('.top-menus')
+	.mouseover(function(e){
+		$('#top-menus-trigger').addClass('hover');
+		$('#top-menus-list').stop().fadeIn();
+	})
+	.mouseout(function(){
+		$('#top-menus-trigger').removeClass('hover');
+		$('#top-menus-list').stop().fadeOut();
+	})
+
 	//hove效果
 	$('.site-index-content .article-wrap')
 	.mouseover(function(){
@@ -8,7 +20,7 @@ $(function(){
 	})
 	.mouseout(function(){
 		$(this).removeClass('chosen-arc').prev().removeClass('chosen-prev');
-	});
+	})
 
 	// $(window).resize(function(){
 	// 	timeId && clearTimeout(timeId);

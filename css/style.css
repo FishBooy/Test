@@ -26,18 +26,84 @@
 }
 /*公共-页头*/
 .site-header{
-    padding: 1.5em 1.6em 0.5em 1.6em;
+    position: relative;
+    padding: 1.5em 1.6em 0.8em 1.6em;
 }
 .home-link{
     display: block;
     float: left;
 }
+.home-link img{
+    float: left;
+}
 .home-link span{
-    position: relative;
-    bottom: 15px;
+    display: block;
+    float: left;
     font-size: 2em;
     color: #212b38;
     font-weight:bold;
+    margin: 8px 0 0 3px;
+    color: #ea6037;
+}
+.top-menus{
+    float: right;
+}
+.top-menus-trigger{
+    display: block;
+    padding-right: 1.8em;
+    position: absolute;
+    top: 25px;
+    right: 0;
+    z-index: 999;
+    transition: all 0.4s; 
+}
+.top-menus-trigger i{
+    font-size: 2.2em;
+    color:#545b65;
+
+}
+.top-menus .hover{
+    padding-right: 2.2em;
+}
+.top-menus .hover i{
+    color: #2c3138;
+}
+.top-menus-list{
+    display: none;
+    border:#e3e6ea 1px solid;
+    box-shadow: 0 1px 3px rgba(100,100,100,.14);
+    position: absolute;
+    padding-right: 40px;
+    position: absolute;
+    right: 1.6em;
+    top: 25px;
+}
+.top-menus-list.show{
+    display: block;
+}
+.top-menus-list li{
+    display: block;
+    float: left;
+    font-size: 1.25em;
+    border-right:#e3e6ea 1px solid;
+}
+.top-menus-list li a{
+    display: block;
+    padding: 3px 10px;
+    color: #545b65;
+}
+.top-menus li i{
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #545b65;
+    margin-right: 2px;
+}
+.top-menus li a:hover{
+    color: #2c3138;
+    background: #fff;
+}
+.top-menus li a:hover i{
+    color: #2c3138;
 }
 
 /*====首页样式====*/
@@ -387,7 +453,6 @@ input:focus{
     overflow: hidden;
     zoom:1;
     border-top:#d5dbe4 1px solid;  
-    border-bottom: #d5dbe4 1px solid;
     padding: 1em 0;
 }
 .post-navigation .nav-links span,
@@ -430,6 +495,9 @@ input:focus{
     }
     .prev i,.next i{
         font-size: 1.2em;
+    }
+    .top-menus-list li span{
+        display: none;
     }
 }
 @media (min-width: 990px) and (max-width: 1200px) {
