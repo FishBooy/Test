@@ -2,7 +2,7 @@
 var timeId;
 $(function(){
 	//hove效果
-	$('#home-page .article-wrap')
+	$('.site-index-content .article-wrap')
 	.mouseover(function(){
 		$(this).addClass('chosen-arc').prev().addClass('chosen-prev');
 	})

@@ -1,3 +1,4 @@
+/*====首页样式====*/
 /*公共-布局*/
 .clear-fix:after{
     float: none;
@@ -15,7 +16,7 @@
 .transition400{
     transition: all 0.4s;
 }
-.main-wrapper{
+.site-wrapper{
     width: 60%;
     margin: 0 auto;
 }
@@ -23,16 +24,20 @@
 .screen-reader-text{
     display: none;
 }
-
-
-/*公共-头部*/
-.main-header{
-    padding: 1em 0 0 0;
+/*公共-页头*/
+.site-header{
+    padding: 1.5em 1.6em 0.5em 1.6em;
 }
 .home-link{
     display: block;
     float: left;
-    margin-left: 1.6em;
+}
+.home-link span{
+    position: relative;
+    bottom: 15px;
+    font-size: 2em;
+    color: #212b38;
+    font-weight:bold;
 }
 
 /*====首页样式====*/
@@ -95,7 +100,7 @@
 }
 /*列表-评论*/
 .article-info{
-    border-bottom: rgba(192, 199, 206,0.8) 1px dotted;
+    border-bottom: rgba(192, 199, 206,0.9) 1px dotted;
     font-size: 1.1em;
     padding: 0 0 15px 0;
     vertical-align: middle;
@@ -173,6 +178,13 @@ a.next:hover{
 /*文章内容*/
 .article-all-content p{
     color: #2c3138;
+}
+.article-all-content{
+    /*padding: 2em;
+    border: #d5dbe4 1px solid;
+    background: #fff;
+    box-shadow: 0 2px 3px rgba(100,100,100,.2);
+    border-top: #2c3138 3px solid;*/
 }
 .article-all-content .article-title{
     font-size: 1.8em;
@@ -254,7 +266,17 @@ a.next:hover{
     margin-bottom: 15px;
 }
 .comments-area{
-    padding: 2.5em 1.6em;
+    padding: 0 1.6em;
+}
+.comments-area-wrap{
+    padding: 2em;
+    background: #fff;
+    border: #e3e6ea 1px solid;
+    box-shadow: 0 1px 3px rgba(100,100,100,.18);
+    border-top: #2c3138 3px solid;
+}
+.comment-respond{
+    margin-top: 30px;
 }
 .comment-notes{
     color: #2c3138;
@@ -390,7 +412,7 @@ input:focus{
 }
 /*---适配尺寸---*/
 @media (max-width: 990px) {
-    .main-wrapper{
+    .site-wrapper{
         width: 100%;
     }
     .article-wrap.chosen-arc{
@@ -411,7 +433,7 @@ input:focus{
     }
 }
 @media (min-width: 990px) and (max-width: 1200px) {
-    .main-wrapper{
+    .site-wrapper{
         width: 70%;
     }
     .article-wrap.chosen-arc{
@@ -419,7 +441,7 @@ input:focus{
     }
 }
 @media (min-width: 1200px) {
-    .main-wrapper{
+    .site-wrapper{
         width: 60%;
     }
     .article-wrap.chosen-arc{
