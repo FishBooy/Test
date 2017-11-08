@@ -14,7 +14,7 @@ $(function(){
 	})
 
 	//hove效果
-	$('.site-index-content .article-wrap')
+	$('.site-index-content .post-block')
 	.mouseover(function(){
 		$(this).addClass('chosen-arc').prev().addClass('chosen-prev');
 	})

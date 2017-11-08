@@ -1,3 +1,4 @@
+@import url("css/global.css");
 /*====首页样式====*/
 /*公共-布局*/
 .clear-fix:after{
@@ -9,9 +10,6 @@
     height: 0;
     overflow: hidden;
     zoom: 1;
-}
-.transition300{
-    transition: all 0.3s;
 }
 .says,
 .screen-reader-text{
