@@ -46,7 +46,9 @@
     color: #ea6037;
 }
 .top-menus{
-    float: right;
+    /*float: right;*/
+    overflow: hidden;
+    zoom:1;
 }
 .top-menus-trigger{
     display: block;
@@ -476,6 +478,59 @@ input:focus{
     margin-right: 10px;
 }
 /*---适配尺寸---*/
+@media (max-width: 600px) {
+    .site-wrapper{
+        width: 100%;
+    }
+    .site-header{
+        padding-top: 10px;
+        background: #1f2833;
+    }
+    .top-menus-list li span{
+        display: none;
+    }
+    .home-link img{
+        display: none;
+    }
+    .home-link span{
+        font-size: 1.6em;
+        color: #fff;
+    }
+    .top-menus-trigger{
+        top: 13px;
+    }
+    .top-menus .hover i{
+        color: #fff;
+    }
+    .top-menus-trigger i{
+        font-size: 1.8em;
+        color: #fff;
+    }
+    .top-menus-list{
+        top: 12px;
+        border: none;
+        box-shadow: none;
+    }
+    .top-menus-list li{
+        border:none;
+    }
+    .top-menus-list li a{
+        padding: 3px 10px;
+        color: #545b65;
+    }
+    .top-menus-list li a:hover{
+        background: none;
+    }
+    .top-menus-list li a:hover i{
+        color: #fff;
+    }
+    .top-menus li i{
+        font-weight: bold;
+        font-size: 1.25em;
+        color: #5d656f;
+        margin-right: 2px;
+    }
+}
 @media (max-width: 990px) {
     .site-wrapper{
         width: 100%;
@@ -495,9 +550,6 @@ input:focus{
     }
     .prev i,.next i{
         font-size: 1.2em;
-    }
-    .top-menus-list li span{
-        display: none;
     }
 }
 @media (min-width: 990px) and (max-width: 1200px) {
