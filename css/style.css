@@ -16,13 +16,16 @@
 .transition400{
     transition: all 0.4s;
 }
+.says,
+.screen-reader-text{
+    display: none;
+}
 .site-wrapper{
     width: 60%;
     margin: 0 auto;
 }
-.says,
-.screen-reader-text{
-    display: none;
+.site-index-content{
+    clear: both;
 }
 /*公共-页头*/
 .site-header{
