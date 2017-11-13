@@ -18,17 +18,16 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area  articlepage">
-		<main id="main" class="site-main" role="main">
+	<div id="primary" class="site-category-content content-area  articlepage">
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
+			<div class="category-title">
 				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
+					the_archive_title( '<h1 class="page-title"><i class="iconfont icon-copy"></i> ', '</h1>' );
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
-			</header><!-- .page-header -->
+			</div><!-- .page-header -->
 
 			<?php
 			// Start the Loop.
@@ -58,7 +57,6 @@ get_header(); ?>
 		endif;
 		?>
 
-		</main><!-- .site-main -->
-	</section><!-- .content-area -->
+	</div><!-- .content-area -->
 
 <?php get_footer(); ?>

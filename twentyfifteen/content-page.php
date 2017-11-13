@@ -8,17 +8,15 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('post-block'); ?>>
 	<?php
 		// Post thumbnail.
 		twentyfifteen_post_thumbnail();
 	?>
 
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
+	<?php the_title( '<h1 class="post-title">', '</h1>' ); ?>
 
-	<div class="entry-content">
+	<div class="post-body">
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(

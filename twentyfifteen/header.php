@@ -28,16 +28,22 @@
 	<div class="site-header clear-fix">
 		<?php twentyfifteen_the_custom_logo();?>
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="home-link" rel="home">
-            <img src="images/header-logo.png" style="width: 40px;">
+            <img src="<?php echo(get_template_directory_uri())?>/images/header-logo.png" style="width: 40px;">
             <span><?php bloginfo( 'name' ); ?></span>
         </a>
         <div class="top-menus">
             <a class="top-menus-trigger" id="top-menus-trigger"><i class="iconfont icon-menu"></i></a>
-            <ul class="top-menus-list" id="top-menus-list">
-                <li><a href=""><i class="iconfont icon-recent"></i> 最新</a></li>
-                <li><a href=""><i class="iconfont icon-file"></i> 分类</a></li>
-                <li><a href=""><i class="iconfont icon-text"></i> 所有</a></li>
-            </ul>
+			<?php if ( has_nav_menu( 'primary' ) ) : ?>
+					<?php
+						// Primary navigation menu.
+						wp_nav_menu( array(
+							'container'      => '',
+							'menu_class'     => 'nav-menu top-menus-list',
+							'menu_id'        => 'top-menus-list',
+							'theme_location' => 'primary',
+						) );
+					?>
+			<?php endif; ?>
         </div>
 	</div><!-- .sidebar -->
 

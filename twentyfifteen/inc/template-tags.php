@@ -72,16 +72,14 @@ function twentyfifteen_entry_meta() {
 			get_the_modified_date()
 		);
 
-		printf( '<span class="post-info-date"><span class="screen-reader-text">%1$s </span><i class="iconfont icon-time"></i><a href="%2$s" rel="bookmark">%3$s</a></span>',
-			_x( 'Posted on', 'Used before publish date.', 'twentyfifteen' ),
-			esc_url( get_permalink() ),
+		printf( '<span class="post-info-date"><i class="iconfont icon-time"></i><span class="screen-reader-text">发布于</span> %1$s</span>',
 			$time_string
 		);
 	}
 
 	if ( 'post' == get_post_type() ) {
 		if ( is_singular() || is_multi_author() ) {
-			printf( '<span class="byline"><span class="author vcard"><span class="screen-reader-text">%1$s </span><a class="url fn n" href="%2$s">%3$s</a></span></span>',
+			printf( '<span class="byline"><i class="iconfont icon-my"></i> <span class="screen-reader-text">%1$s </span><a class="url fn n" href="%2$s">%3$s</a></span>',
 				_x( 'Author', 'Used before post author name.', 'twentyfifteen' ),
 				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 				get_the_author()
@@ -90,7 +88,7 @@ function twentyfifteen_entry_meta() {
 
 		$categories_list = get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'twentyfifteen' ) );
 		if ( $categories_list && twentyfifteen_categorized_blog() ) {
-			printf( '<span class="cat-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
+			printf( '<span class="cat-links"><i class="iconfont icon-copy"></i><span class="screen-reader-text">%1$s</span> %2$s</span>',
 				_x( 'Categories', 'Used before category names.', 'twentyfifteen' ),
 				$categories_list
 			);
@@ -118,9 +116,9 @@ function twentyfifteen_entry_meta() {
 	}
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-		echo '<span class="comments-link">';
+		echo '<span class="comments-link"><i class="iconfont icon-mark"></i> ';
 		/* translators: %s: post title */
-		comments_popup_link( sprintf( __( 'Leave a comment<span class="screen-reader-text"> on %s</span>', 'twentyfifteen' ), get_the_title() ) );
+		comments_popup_link( sprintf( '留下评论<span class="screen-reader-text"> on %s</span>', get_the_title() ) );
 		echo '</span>';
 	}
 }

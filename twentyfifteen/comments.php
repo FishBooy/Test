@@ -21,38 +21,43 @@ if ( post_password_required() ) {
 ?>
 
 <div id="comments" class="comments-area">
+	<div class="comments-area-wrap">
 
-	<?php if ( have_comments() ) : ?>
-		<h2 class="comments-title">
-			<?php
-				printf( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'twentyfifteen' ),
-					number_format_i18n( get_comments_number() ), get_the_title() );
-			?>
-		</h2>
+		<?php if ( have_comments() ) : ?>
+			<h2 class="comments-title">
+				<?php
+					printf( '<i class="iconfont icon-mark"></i>共有 %1$s 条评论', get_comments_number());
+				?>
+			</h2>
 
-		<?php twentyfifteen_comment_nav(); ?>
+			<?php twentyfifteen_comment_nav(); ?>
 
-		<ol class="comment-list">
-			<?php
-				wp_list_comments( array(
-					'style'       => 'ol',
-					'short_ping'  => true,
-					'avatar_size' => 56,
-				) );
-			?>
-		</ol><!-- .comment-list -->
+			<ol class="comment-list">
+				<?php
+					wp_list_comments( array(
+						'style'       => 'ol',
+						'short_ping'  => true,
+						'avatar_size' => 56,
+					) );
+				?>
+			</ol><!-- .comment-list -->
 
-		<?php twentyfifteen_comment_nav(); ?>
+			<?php twentyfifteen_comment_nav(); ?>
 
-	<?php endif; // have_comments() ?>
+		<?php endif; // have_comments() ?>
 
-	<?php
-		// If comments are closed and there are comments, let's leave a little note, shall we?
-		if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
-	?>
-		<p class="no-comments"><?php _e( 'Comments are closed.', 'twentyfifteen' ); ?></p>
-	<?php endif; ?>
+		<?php
+			// If comments are closed and there are comments, let's leave a little note, shall we?
+			if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
+		?>
+			<p class="no-comments"><?php _e( 'Comments are closed.', 'twentyfifteen' ); ?></p>
+		<?php endif; ?>
 
-	<?php comment_form(); ?>
+		<?php comment_form(array(
+			'title_reply_before'   => '<h3 id="reply-title" class="comment-reply-title"><i class="iconfont icon-edit"></i>',
+			'title_reply_after'    => '</h3>'
+		)); ?>
+
+	</div>
 
 </div><!-- .comments-area -->
