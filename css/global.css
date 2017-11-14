@@ -10,7 +10,7 @@ th, td /* table elements 表格元素 */ {
   margin: 0;
   padding: 0;
 }
-body{background: #fefeff;}
+body{background: #f6f6f6;}
 
 /** 设置默认字体 **/
 body,button, input, select, textarea /* for ie */ {

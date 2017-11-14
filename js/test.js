@@ -1,5 +1,3 @@
-
-var timeId;
 $(function(){
 
 	//菜单开关
@@ -14,7 +12,9 @@ $(function(){
 	})
 
 	//hove效果
-	$('.site-index-content .post-block')
+	var posts=$('.site-index-content .post-block');
+	posts.eq(posts.length-1).addClass('last-post');
+	posts
 	.mouseover(function(){
 		$(this).addClass('chosen-arc').prev().addClass('chosen-prev');
 	})
