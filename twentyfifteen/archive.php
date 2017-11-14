@@ -18,7 +18,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="site-category-content content-area  articlepage">
+	<div id="primary" class="site-category-content post-list-wrap content-area  articlepage">
 
 		<?php if ( have_posts() ) : ?>
 

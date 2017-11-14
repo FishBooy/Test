@@ -17,7 +17,7 @@
     display: none;
 }
 .site-column{
-    width: 55%;
+    width: 56%;
     margin: 0 auto;
 }
 .site-index-content,
@@ -27,7 +27,7 @@
 /*公共-页头*/
 .site-header{
     position: relative;
-    padding: 1.5em 2.5em 1em 2.5em;
+    padding: 1.5em 0 1em 0;
 }
 .home-link{
     display: block;
@@ -51,10 +51,10 @@
     zoom:1;
 }
 .top-menus-trigger{
+    cursor: pointer;
     display: block;
-    padding-right: 1.8em;
     position: absolute;
-    top: 22px;
+    top: 28px;
     right: 0;
     z-index: 999;
     transition: all 0.4s; 
@@ -65,7 +65,7 @@
 
 }
 .top-menus .hover{
-    padding-right: 2.2em;
+    right: 7px;
 }
 .top-menus .hover i{
     color: #2c3138;
@@ -73,14 +73,14 @@
 .top-menus-list{
     display: none;
     background: #fff;
-    border:#e3e6ea 1px solid;
+    border:#dadee2 1px solid;
     position: absolute;
     padding-right: 40px;
-    right: 2.5em;
-    top: 25px;
-    -moz-box-shadow:0 1px 3px rgba(100,100,100,.14);
-    -webkit-box-shadow:0 1px 3px rgba(100,100,100,.14);
-    box-shadow:0 1px 3px rgba(100,100,100,.14);
+    right: 0;
+    top: 30px;
+    -moz-box-shadow:0 1px 2px rgba(100,100,100,.16);
+    -webkit-box-shadow:0 1px 2px rgba(100,100,100,.16);
+    box-shadow:0 1px 2px rgba(100,100,100,.16);
 }
 .top-menus-list.show{
     display: block;
@@ -93,7 +93,7 @@
 }
 .top-menus-list li a{
     display: block;
-    padding: 3px 10px;
+    padding: 5px 10px;
     color: #7E848E;
 }
 .top-menus li i{
@@ -104,7 +104,7 @@
 }
 .top-menus li a:hover{
     color: #2c3138;
-    background: #fff;
+    background: #f6f6f6;
 }
 .top-menus li a:hover i{
     color: #2c3138;
@@ -143,22 +143,25 @@
     padding-bottom: 10px;
     border-bottom: none;
 }
-/*.post-block.chosen-arc{
+/*.post-block.chosen-post{
     background: #fff;
     border-color:#e3e6ea;
     -moz-box-shadow:0 1px 3px rgba(100,100,100,.18);
     -webkit-box-shadow:0 1px 3px rgba(100,100,100,.18);
     box-shadow:0 1px 3px rgba(100,100,100,.18);
 }*/
-.post-block.chosen-arc{
+.post-block.chosen-post{
     background: #fafafa;
-    border-bottom:#e7eaee 1px solid;
+    border-bottom:#e2e5e8 1px solid;
+    box-shadow:0px 0px 4px 1px rgb(238, 238, 238) inset;
+    -moz-box-shadow:0px 0px 4px 1px rgb(238, 238, 238) inset;
+    -webkit-box-shadow:0px 0px 4px 1px rgb(238, 238, 238) inset;
 }
 .post-block.last-post{
     border-bottom: none;
 }
 .post-block.chosen-prev{
-    border-bottom: #e7eaee 1px solid;
+    border-bottom: #e2e5e8 1px solid;
 }
 /*列表-标题*/
 .post-title{
@@ -175,7 +178,7 @@
 .post-title a:hover{
     text-decoration: none;
 }
-.post-block.chosen-arc .post-title a{
+.post-block.chosen-post .post-title a{
     color: #ea6037;
 }
 /*列表-段落*/
@@ -197,11 +200,11 @@
 .more-link i{
     margin-left: 2px;
 }
-.post-block.chosen-arc .post-body{
+.post-block.chosen-post .post-body{
     color: #24272b;
 }
 
-.post-block.chosen-arc .post-body .more-link{
+.post-block.chosen-post .post-body .more-link{
     color: #585e69;
 }
 /*列表-评论*/
@@ -226,11 +229,11 @@
 .post-info .updated{
     display: none;
 }
-.post-block.chosen-arc .post-info{
+.post-block.chosen-post .post-info{
     border-color: rgba(255,255,255,0);
 }
-.post-block.chosen-arc .post-info span,
-.post-block.chosen-arc .post-info a{
+.post-block.chosen-post .post-info span,
+.post-block.chosen-post .post-info a{
     color: #585e69;
 }
 .post-block.chosen-prev .post-info{
@@ -320,7 +323,7 @@ a.next:hover{
     border-top: #2c3138 3px solid;*/
 }
 .site-content-content .post-block{
-    padding-bottom: 8px;
+    padding-bottom: 20px;
     background: #fff;
     border:#dadee2 1px solid;
     -moz-box-shadow:0 1px 3px rgba(100,100,100,.18);
@@ -621,7 +624,7 @@ input:focus{
     .site-column{
         width: 100%;
     }
-    /*.post-block.chosen-arc{
+    /*.post-block.chosen-post{
         border-radius: 0;
         border-left-color: rgba(255,255,255,0);
         border-right-color: rgba(255,255,255,0);
@@ -650,15 +653,15 @@ input:focus{
     .site-column{
         width: 70%;
     }
-    /*.post-block.chosen-arc{
+    /*.post-block.chosen-post{
         left: 5px;
     }*/
 }
 @media (min-width: 1200px) {
     .site-column{
-        width: 60%;
+        width: 56%;
     }
-    /*.post-block.chosen-arc{
+    /*.post-block.chosen-post{
         left: 5px;
     }*/
 }

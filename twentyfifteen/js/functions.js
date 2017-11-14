@@ -186,14 +186,14 @@
 		})
 
 		//index-post-hover
-		var posts=$('.site-index-content .post-block');
+		var posts=$('.post-list-wrap .post-block');
 		posts.eq(posts.length-1).addClass('last-post');
 		posts
 		.mouseover(function(){
-			$(this).addClass('chosen-arc').prev().addClass('chosen-prev');
+			$(this).addClass('chosen-post').prev().addClass('chosen-prev');
 		})
 		.mouseout(function(){
-			$(this).removeClass('chosen-arc').prev().removeClass('chosen-prev');
+			$(this).removeClass('chosen-post').prev().removeClass('chosen-prev');
 		})
 		
 

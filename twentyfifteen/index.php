@@ -15,7 +15,7 @@
  */
 
 get_header(); ?>
-	<div id="content" class="site-index-content">
+	<div id="content" class="site-index-content post-list-wrap">
 
 		<?php if ( have_posts() ) : ?>
 
