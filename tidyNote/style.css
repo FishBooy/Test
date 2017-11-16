@@ -127,9 +127,20 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /*公共-页尾*/
 .site-info{
     padding: 2em 2.5em;
+    overflow: hidden;
+    zoom:1;
 }
-.site-info a{
+.site-info a,
+.site-info span{
     color: #7E848E;
+}
+.site-info a.wp-copy{
+    float: left;
+}
+.site-info .icp-info{
+    float: right;
+    position: relative;
+    top: 4px;
 }
 .site-info a:hover{
     color: #61666f;

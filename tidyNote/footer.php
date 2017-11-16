@@ -5,23 +5,22 @@
  * Contains the closing of the "site-content" div and all content after.
  *
  * @package WordPress
- * @subpackage Twenty_Fifteen
- * @since Twenty Fifteen 1.0
  */
 ?>
 
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
+			<a href="https://wordpress.org/" class="wp-copy">Powered by Wordpress <i class="iconfont icon-wordpress"></i> </a>
 			<?php
 				/**
-				 * Fires before the Twenty Fifteen footer text for footer customization.
+				 * Fires before the  footer text for footer customization.
 				 *
-				 * @since Twenty Fifteen 1.0
 				 */
-				do_action( 'twentyfifteen_credits' );
+				echo '<span class="icp-info">备案号 ';
+				zh_cn_l10n_icp_num();
+				echo '</span>';
 			?>
-			<a href="https://wordpress.org/">Powered by Wordpress <i class="iconfont icon-wordpress"></i></a>
 		</div><!-- .site-info -->
 	</footer><!-- .site-footer -->
 

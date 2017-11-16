@@ -1,19 +1,15 @@
 <?php
 /**
- * Custom template tags for Twenty Fifteen
+ * Custom template tags for tidyNote
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
  * @package WordPress
- * @subpackage Twenty_Fifteen
- * @since Twenty Fifteen 1.0
  */
 
 if ( ! function_exists( 'tidyNote_comment_nav' ) ) :
 /**
  * Display navigation to next/previous comments when applicable.
- *
- * @since Twenty Fifteen 1.0
  */
 function tidyNote_comment_nav() {
 	// Are there comments to navigate through?
@@ -41,8 +37,6 @@ endif;
 if ( ! function_exists( 'tidyNote_entry_meta' ) ) :
 /**
  * Prints HTML with meta information for the categories, tags.
- *
- * @since Twenty Fifteen 1.0
  */
 function tidyNote_entry_meta() {
 	if ( is_sticky() && is_home() && ! is_paged() ) {
@@ -85,7 +79,7 @@ function tidyNote_entry_meta() {
 		}
 
 		$categories_list = get_the_category_list(', ');
-		if ( $categories_list && twentyfifteen_categorized_blog() ) {
+		if ( $categories_list && tidyNote_categorized_blog() ) {
 			printf( '<span class="cat-links"><i class="iconfont icon-copy"></i><span class="screen-reader-text">分类 </span> %1$s</span>',
 				$categories_list
 			);
@@ -122,12 +116,10 @@ endif;
 /**
  * Determine whether blog/site has more than one category.
  *
- * @since Twenty Fifteen 1.0
- *
  * @return bool True of there is more than one category, false otherwise.
  */
-function twentyfifteen_categorized_blog() {
-	if ( false === ( $all_the_cool_cats = get_transient( 'twentyfifteen_categories' ) ) ) {
+function tidyNote_categorized_blog() {
+	if ( false === ( $all_the_cool_cats = get_transient( 'tidyNote_categories' ) ) ) {
 		// Create an array of all the categories that are attached to posts.
 		$all_the_cool_cats = get_categories( array(
 			'fields'     => 'ids',
@@ -140,29 +132,27 @@ function twentyfifteen_categorized_blog() {
 		// Count the number of categories that are attached to the posts.
 		$all_the_cool_cats = count( $all_the_cool_cats );
 
-		set_transient( 'twentyfifteen_categories', $all_the_cool_cats );
+		set_transient( 'tidyNote_categories', $all_the_cool_cats );
 	}
 
 	if ( $all_the_cool_cats > 1 || is_preview() ) {
-		// This blog has more than 1 category so twentyfifteen_categorized_blog should return true.
+		// This blog has more than 1 category so tidyNote_categorized_blog should return true.
 		return true;
 	} else {
-		// This blog has only 1 category so twentyfifteen_categorized_blog should return false.
+		// This blog has only 1 category so tidyNote_categorized_blog should return false.
 		return false;
 	}
 }
 
 /**
- * Flush out the transients used in {@see twentyfifteen_categorized_blog()}.
- *
- * @since Twenty Fifteen 1.0
+ * Flush out the transients used in {@see tidyNote_categorized_blog()}.
  */
-function twentyfifteen_category_transient_flusher() {
+function tidyNote_category_transient_flusher() {
 	// Like, beat it. Dig?
-	delete_transient( 'twentyfifteen_categories' );
+	delete_transient( 'tidyNote_categories' );
 }
-add_action( 'edit_category', 'twentyfifteen_category_transient_flusher' );
-add_action( 'save_post',     'twentyfifteen_category_transient_flusher' );
+add_action( 'edit_category', 'tidyNote_category_transient_flusher' );
+add_action( 'save_post',     'tidyNote_category_transient_flusher' );
 
 if ( ! function_exists( 'tidyNote_post_thumbnail' ) ) :
 /**
@@ -171,7 +161,6 @@ if ( ! function_exists( 'tidyNote_post_thumbnail' ) ) :
  * Wraps the post thumbnail in an anchor element on index views, or a div
  * element when on single views.
  *
- * @since Twenty Fifteen 1.0
  */
 function tidyNote_post_thumbnail() {
 	if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
@@ -203,8 +192,6 @@ if ( ! function_exists( 'tidyNote_get_link_url' ) ) :
  *
  * Falls back to the post permalink if no URL is found in the post.
  *
- * @since Twenty Fifteen 1.0
- *
  * @see get_url_in_content()
  *
  * @return string The Link format URL.
@@ -220,8 +207,6 @@ if ( ! function_exists( 'tidyNote_excerpt_more' ) && ! is_admin() ) :
 /**
  * Replaces "[...]" (appended to automatically generated excerpts) with ... and a 'Continue reading' link.
  *
- * @since Twenty Fifteen 1.0
- *
  * @return string 'Continue reading' link prepended with an ellipsis.
  */
 function tidyNote_excerpt_more( $more ) {
@@ -235,15 +220,13 @@ function tidyNote_excerpt_more( $more ) {
 add_filter( 'excerpt_more', 'tidyNote_excerpt_more' );
 endif;
 
-if ( ! function_exists( 'twentyfifteen_the_custom_logo' ) ) :
+if ( ! function_exists( 'tidyNote_the_custom_logo' ) ) :
 /**
  * Displays the optional custom logo.
  *
  * Does nothing if the custom logo is not available.
- *
- * @since Twenty Fifteen 1.5
  */
-function twentyfifteen_the_custom_logo() {
+function tidyNote_the_custom_logo() {
 	if ( function_exists( 'the_custom_logo' ) ) {
 		the_custom_logo();
 	}

@@ -5,8 +5,6 @@
  * Displays all of the head element and everything up until the "site-content" div.
  *
  * @package WordPress
- * @subpackage Twenty_Fifteen
- * @since Twenty Fifteen 1.0
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">
@@ -23,10 +21,10 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site site-column">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentyfifteen' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content">跳至正文</a>
 
 	<div class="site-header clear-fix">
-		<?php twentyfifteen_the_custom_logo();?>
+		<?php tidyNote_the_custom_logo();?>
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="home-link" rel="home">
             <img src="<?php echo(get_template_directory_uri())?>/images/header-logo.png" style="width: 40px;">
             <span><?php bloginfo( 'name' ); ?></span>

@@ -15,7 +15,7 @@
  * @param WP_Customize_Manager $wp_customize Customizer object.
  */
 function twentyfifteen_customize_register( $wp_customize ) {
-	$color_scheme = twentyfifteen_get_color_scheme();
+	$color_scheme = tidyNote_get_color_scheme();
 
 	$wp_customize->get_setting( 'blogname' )->transport        = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
@@ -223,7 +223,7 @@ if ( ! function_exists( 'twentyfifteen_get_color_scheme' ) ) :
  *
  * @return array An associative array of either the current or default color scheme hex values.
  */
-function twentyfifteen_get_color_scheme() {
+function tidyNote_get_color_scheme() {
 	$color_scheme_option = get_theme_mod( 'color_scheme', 'default' );
 	$color_schemes       = twentyfifteen_get_color_schemes();
 
@@ -290,7 +290,7 @@ function twentyfifteen_color_scheme_css() {
 		return;
 	}
 
-	$color_scheme = twentyfifteen_get_color_scheme();
+	$color_scheme = tidyNote_get_color_scheme();
 
 	// Convert main and sidebar text hex color to rgba.
 	$color_textcolor_rgb         = twentyfifteen_hex2rgb( $color_scheme[3] );

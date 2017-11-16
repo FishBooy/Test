@@ -7,16 +7,12 @@
  * relies on many newer functions and markup changes introduced in 4.1.
  *
  * @package WordPress
- * @subpackage Twenty_Fifteen
- * @since Twenty Fifteen 1.0
  */
 
 /**
  * Prevent switching to Twenty Fifteen on old versions of WordPress.
  *
  * Switches to the default theme.
- *
- * @since Twenty Fifteen 1.0
  */
 function twentyfifteen_switch_theme() {
 	switch_theme( WP_DEFAULT_THEME, WP_DEFAULT_THEME );

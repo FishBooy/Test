@@ -13,7 +13,7 @@
  * @uses twentyfifteen_header_style()
  */
 function twentyfifteen_custom_header_setup() {
-	$color_scheme        = twentyfifteen_get_color_scheme();
+	$color_scheme        = tidyNote_get_color_scheme();
 	$default_text_color  = trim( $color_scheme[4], '#' );
 
 	/**
@@ -193,7 +193,7 @@ endif; // twentyfifteen_header_style
  * @see wp_add_inline_style()
  */
 function twentyfifteen_header_background_color_css() {
-	$color_scheme            = twentyfifteen_get_color_scheme();
+	$color_scheme            = tidyNote_get_color_scheme();
 	$default_color           = $color_scheme[1];
 	$header_background_color = get_theme_mod( 'header_background_color', $default_color );
 
@@ -237,7 +237,7 @@ add_action( 'wp_enqueue_scripts', 'twentyfifteen_header_background_color_css', 1
  * @since Twenty Fifteen 1.0
  */
 function twentyfifteen_sidebar_text_color_css() {
-	$color_scheme       = twentyfifteen_get_color_scheme();
+	$color_scheme       = tidyNote_get_color_scheme();
 	$default_color      = $color_scheme[4];
 	$sidebar_link_color = get_theme_mod( 'sidebar_textcolor', $default_color );
 

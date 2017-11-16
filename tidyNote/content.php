@@ -5,8 +5,6 @@
  * Used for both single and index/archive/search.
  *
  * @package WordPress
- * @subpackage Twenty_Fifteen
- * @since Twenty Fifteen 1.0
  */
 ?>
 
@@ -37,11 +35,11 @@
 				) );
 
 				wp_link_pages( array(
-					'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentyfifteen' ) . '</span>',
+					'before'      => '<div class="page-links"><span class="page-links-title">页数:</span>',
 					'after'       => '</div>',
 					'link_before' => '<span>',
 					'link_after'  => '</span>',
-					'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'twentyfifteen' ) . ' </span>%',
+					'pagelink'    => '<span class="screen-reader-text">页</span>%',
 					'separator'   => '<span class="screen-reader-text">, </span>',
 				) );
 			?>
